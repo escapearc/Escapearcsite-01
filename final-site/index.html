@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>EscapeArc | RAW · REMOTE · REAL</title>
+<meta name="description" content="EscapeArc — Adventure motorcycle expeditions, Ladakh, Spiti, Bhutan, and international tours. Founded 2017, Buldhana, Maharashtra."/>
+<link rel="stylesheet" href="css/style.css"/>
+</head>
+<body>
+
+<div id="loader">
+  <div class="loader-logo"><img class="logo-gif" src="assets/media/logo-loader.gif" alt="EscapeArc"></div>
+  <div id="loadingText">Loading route map…</div>
+  <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+</div>
+
+<header class="nav" id="nav">
+  <div class="container nav-inner">
+    <a class="brand" href="#" onclick="showPage('home');return false">
+      <div class="brand-logo"><img class="logo-gif" src="assets/media/logo-loader.gif" alt="EscapeArc"></div>
+      <div class="brand-text"><strong>EscapeArc</strong><span>RAW · REMOTE · REAL</span></div>
+    </a>
+    <nav class="nav-links" aria-label="Primary">
+      <a onclick="showPage('home')">Home</a>
+      <a onclick="showPage('tours')">Expeditions</a>
+      <a onclick="showPage('checklist')">Checklist</a>
+      <a onclick="showPage('hotels')">Hotels</a>
+      <a onclick="showPage('perfumes')">Perfumes</a>
+      <a onclick="showPage('merch')">Merch</a>
+      <a onclick="showPage('gallery')">Gallery</a>
+      <a onclick="showPage('about')">About</a>
+      <a onclick="showPage('policies')">Policies</a>
+      <a onclick="showPage('contact')">Contact</a>
+      <a onclick="showPage('admin')">Admin</a>
+    </nav>
+    <div class="nav-actions">
+      <a class="btn btn-ghost" href="javascript:void(0)" onclick="openBooking()">Book Now</a>
+      <button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button>
+    </div>
+  </div>
+</header>
+
+<main id="main" class="hidden">
+
+<!-- ═══════════ HOME ═══════════ -->
+<section class="hero page" id="home">
+  <div class="container hero-grid">
+    <div>
+      <div class="section-kicker">Adventure &amp; Lifestyle Company — Founded 2017, Buldhana</div>
+      <h1>Ride beyond the<br><span class="accent">ordinary</span></h1>
+      <p>Motorcycle expeditions, group rides, and curated travel experiences across India and the world. 150+ destinations, 50+ years of combined experience, thousands of riders led safely.</p>
+      <div class="hero-tags">
+        <span class="chip"><b>2017</b> Founded</span>
+        <span class="chip"><b>150+</b> Destinations</span>
+        <span class="chip"><b>50+</b> Yrs experience</span>
+        <span class="chip"><b>India Book of Records</b></span>
+      </div>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:26px">
+        <a class="btn btn-aurora btn-aurora-primary" href="#" onclick="showPage('tours')">View Expeditions</a>
+        <a class="btn btn-aurora btn-aurora-multi" href="#" onclick="openBooking()">Book Expedition</a>
+        <a class="btn btn-ghost" href="https://wa.me/919422881098" target="_blank">WhatsApp Us</a>
+      </div>
+      <div class="stat-row">
+        <div class="stat"><strong>RAW</strong><span>Route-first journeys</span></div>
+        <div class="stat"><strong>REMOTE</strong><span>High-altitude exploration</span></div>
+        <div class="stat"><strong>REAL</strong><span>Safe &amp; operational</span></div>
+        <div class="stat"><strong>RIDER-FIRST</strong><span>Brotherhood &amp; support</span></div>
+      </div>
+    </div>
+    <aside class="hero-card">
+      <div class="hero-image"><div class="playBadge">⛰️ Expeditions since 2017</div></div>
+      <div class="hero-metrics">
+        <div class="metric"><strong>₹27,999</strong><span>Spiti ride</span></div>
+        <div class="metric"><strong>9N/10D</strong><span>Expedition</span></div>
+        <div class="metric"><strong>25+</strong><span>Riders/group</span></div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<div class="marquee" aria-hidden="true">
+  <div class="marquee-track">
+    <span><span class="dot"></span>Ladakh Expeditions</span><span><span class="dot"></span>Spiti Valley</span><span><span class="dot"></span>Bhutan</span><span><span class="dot"></span>Kerala Tours</span><span><span class="dot"></span>Andaman Islands</span><span><span class="dot"></span>Europe Tours</span><span><span class="dot"></span>Singapore</span><span><span class="dot"></span>Thailand &amp; Bali</span><span><span class="dot"></span>EscapeArc Perfumes</span><span><span class="dot"></span>India Book of Records</span><span><span class="dot"></span>Maharashtra Tourism Recognized</span><span><span class="dot"></span>Streetwear — Coming 2025</span><span><span class="dot"></span>Ladakh Expeditions</span><span><span class="dot"></span>Spiti Valley</span><span><span class="dot"></span>Bhutan</span><span><span class="dot"></span>Kerala Tours</span><span><span class="dot"></span>Andaman Islands</span>
+  </div>
+</div>
+
+<!-- Home destinations -->
+<section class="section" style="padding-top:60px">
+  <div class="container">
+    <div class="section-kicker">Where we ride</div>
+    <h2 class="section-title">Three flagship destinations</h2>
+    <div class="grid cols-3" style="margin-top:32px">
+      <div class="dest-card">
+        <div class="dest-icon">🏔️</div><h3>Ladakh</h3>
+        <p style="margin-top:8px;color:var(--muted);font-size:.9rem">The Land of High Passes — snow-capped peaks, ancient monasteries, world-record routes.</p>
+        <div class="dest-highlights">
+          <div class="dest-highlight">Nubra Valley &amp; Pangong Lake</div>
+          <div class="dest-highlight">Khardung La Pass — world's highest motorable road</div>
+          <div class="dest-highlight">Car tours, bike expeditions, SUV packages</div>
+          <div class="dest-highlight">India Book of Records ride</div>
+        </div>
+        <div style="margin-top:16px"><a class="btn btn-dark" style="font-size:.85rem;padding:10px 16px" onclick="showPage('tours')">Explore Ladakh tours</a></div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-icon">🗻</div><h3>Spiti Valley</h3>
+        <p style="margin-top:8px;color:var(--muted);font-size:.9rem">The Cold Desert — ancient monasteries, barren beauty, extreme altitude.</p>
+        <div class="dest-highlights">
+          <div class="dest-highlight">Tabo, Dhankar, Key Monastery</div>
+          <div class="dest-highlight">Hikkim — World's Highest Post Office</div>
+          <div class="dest-highlight">Komic village, Chandrataal Lake</div>
+          <div class="dest-highlight">9N/10D collab · ₹27,999/person</div>
+        </div>
+        <div style="margin-top:16px"><a class="btn btn-primary" style="font-size:.85rem;padding:10px 16px" onclick="showPage('tours')">View Spiti Tours</a></div>
+      </div>
+      <div class="dest-card">
+        <div class="dest-icon">🐉</div><h3>Bhutan</h3>
+        <p style="margin-top:8px;color:var(--muted);font-size:.9rem">The Last Shangri-La — where happiness is a national goal.</p>
+        <div class="dest-highlights">
+          <div class="dest-highlight">Tiger's Nest Monastery</div>
+          <div class="dest-highlight">Ancient dzongs &amp; cultural immersion</div>
+          <div class="dest-highlight">Spiritual &amp; adventure blend</div>
+          <div class="dest-highlight">Entry via Bagdogra/Siliguri</div>
+        </div>
+        <div style="margin-top:16px"><a class="btn btn-dark" style="font-size:.85rem;padding:10px 16px" onclick="sendWhatsApp('Bhutan tour enquiry')">Enquire on WhatsApp</a></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Home brand verticals -->
+<section class="section" style="padding-top:32px;padding-bottom:60px">
+  <div class="container">
+    <div class="section-kicker">Beyond tours</div>
+    <h2 class="section-title">EscapeArc Universe</h2>
+    <div class="grid cols-3" style="margin-top:28px">
+      <div class="banner" style="cursor:pointer" onclick="showPage('perfumes')">
+        <div class="banner-inner"><div class="section-kicker" style="color:var(--accent)">Fragrance</div><h3 style="font-size:1.4rem">Travel Perfume Collection</h3><p style="color:var(--muted);font-size:.88rem;margin-top:6px">4 Extrait de Parfum scents. 32% concentration. First Mile · Detour · After Journey · Last Stop.</p><span class="btn btn-primary" style="font-size:.8rem;padding:9px 14px;margin-top:12px;display:inline-flex">Explore →</span></div>
+      </div>
+      <div class="banner" style="cursor:pointer" onclick="showPage('merch')">
+        <div class="banner-inner"><div class="section-kicker" style="color:var(--accent)">Streetwear</div><h3 style="font-size:1.4rem">EscapeArc Clothing</h3><p style="color:var(--muted);font-size:.88rem;margin-top:6px">Rider-built streetwear. Mountain Dusk &amp; Desert Sunset. Dropping 2025.</p><span class="btn btn-dark" style="font-size:.8rem;padding:9px 14px;margin-top:12px;display:inline-flex">Join Waitlist →</span></div>
+      </div>
+      <div class="banner" style="cursor:pointer" onclick="showPage('hotels')">
+        <div class="banner-inner"><div class="section-kicker" style="color:var(--accent2)">Stay Database</div><h3 style="font-size:1.4rem">1,232 Verified Stays</h3><p style="color:var(--muted);font-size:.88rem;margin-top:6px">Hotels, homestays, camps &amp; resorts across Spiti and Ladakh. Free to search.</p><span class="btn btn-dark" style="font-size:.8rem;padding:9px 14px;margin-top:12px;display:inline-flex">Browse Hotels →</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ TOURS ═══════════ -->
+<section class="page hidden" id="tours">
+  <div class="page-hero page-hero--tours">
+    <div class="container page-hero-inner">
+      <div class="section-kicker">55+ National &amp; International Routes</div>
+      <h1 class="page-hero-title">Every road has<br><span class="accent">a story.</span></h1>
+      <p class="page-hero-sub">Ladakh to Bhutan, Kerala to Bangkok — route-first rides built around the journey, not the destination.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:24px">
+        <a class="btn btn-aurora btn-aurora-primary" onclick="openBooking()">Book a Route</a>
+        <a class="btn btn-ghost" onclick="showPage('policies')">Read Policies</a>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="padding-top:48px">
+    <div class="container">
+      <div class="split">
+        <div>
+          <div class="section-kicker">Filter expeditions</div>
+          <h2 class="section-title" style="font-size:clamp(22px,3vw,38px)">National and international rides built around the route.</h2>
+          <p class="section-lead" style="font-size:.92rem">40% advance confirms your seat. Balance due 10–15 days before departure. Minimum 25 riders per group.</p>
+          <div style="margin-top:22px" class="toggle" id="tourToggle">
+            <button class="active" data-group="national">National</button>
+            <button data-group="international">International</button>
+            <button data-group="all">All</button>
+          </div>
+          <div style="margin-top:14px;display:flex;flex-wrap:wrap;gap:8px" id="categoryFilter"></div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:16px">
+            <a class="btn btn-dark" onclick="openBooking()">Book selected route</a>
+            <a class="btn btn-ghost" onclick="showPage('policies')">Read policies</a>
+          </div>
+        </div>
+        <div class="flow-visual" id="bikeFlow">
+          <div class="ribbon" id="flowLabel">🇮🇳 National route mode</div>
+          <div class="bike national" id="bike"></div>
+        </div>
+      </div>
+      <div style="margin-top:14px">
+        <input class="field" id="tourSearch" placeholder="Search tours..." style="max-width:320px;margin:0" oninput="renderTours()"/>
+      </div>
+      <div class="grid cols-4" id="tourGrid" style="margin-top:24px"></div>
+    </div>
+  </div>
+  <!-- Spiti Itinerary embedded inside Tours -->
+  <div class="section" style="padding-top:0;border-top:1px solid rgba(255,255,255,.06)">
+    <div class="container">
+      <div class="section-kicker">Signature Collab · The Malang Man</div>
+      <h2 class="section-title">Spiti Valley — 9N/10D at ₹27,999</h2>
+      <p class="section-lead">Chandigarh → Narkanda → Chitkul → Nako → Tabo → Kaza → Chandrataal → Manali → Chandigarh. Min 25 riders. Cash only in Spiti.</p>
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin:24px 0">
+        <div class="metric" style="text-align:left;padding:16px 20px"><strong>₹27,999</strong><span>Per person</span></div>
+        <div class="metric" style="text-align:left;padding:16px 20px"><strong>9N/10D</strong><span>Duration</span></div>
+        <div class="metric" style="text-align:left;padding:16px 20px"><strong>25+</strong><span>Min riders</span></div>
+        <div class="metric" style="text-align:left;padding:16px 20px"><strong>Chandigarh</strong><span>Start point</span></div>
+      </div>
+      <div style="display:grid;grid-template-columns:1fr 1fr;gap:24px">
+        <div>
+          <div class="day-card"><div class="day-label">Day 1</div><div class="day-title">Chandigarh — Briefing Day</div><div class="day-meta"><span class="meta-chip">0 km</span></div><div class="day-desc">Meet team, briefing, documentation.</div></div>
+          <div class="day-card"><div class="day-label">Day 2</div><div class="day-title">Chandigarh → Narkanda</div><div class="day-meta"><span class="meta-chip">170 km</span><span class="meta-chip">~6 hrs</span></div><div class="day-desc">NH22 through Himalayas. Apple orchards, Deodhar forests.</div></div>
+          <div class="day-card"><div class="day-label">Day 3</div><div class="day-title">Narkanda → Chitkul</div><div class="day-meta"><span class="meta-chip">185 km</span><span class="meta-chip">~10 hrs</span></div><div class="day-desc">Baspa river to Chitkul — last inhabited village before Indo-China border.</div></div>
+          <div class="day-card"><div class="day-label">Day 4</div><div class="day-title">Chitkul → Nako via Kalpa</div><div class="day-meta"><span class="meta-chip">150 km</span></div><div class="day-desc">Indo-Tibetan Highway, Khab Bridge — Spiti-Sutlej confluence.</div></div>
+          <div class="day-card"><div class="day-label">Day 5</div><div class="day-title">Tabo → Pin Valley via Gue</div><div class="day-meta"><span class="meta-chip">130 km</span></div><div class="day-desc">Dhankar Monastery, Key Gompa, Langza, Hikkim Post Office.</div></div>
+        </div>
+        <div>
+          <div class="day-card"><div class="day-label">Day 6</div><div class="day-title">Kaza — Hikkim, Komic &amp; Langza</div><div class="day-meta"><span class="meta-chip">4,513m altitude</span></div><div class="day-desc">Komic — highest village in Asia. World's Highest Post Office. Marine fossils.</div></div>
+          <div class="day-card"><div class="day-label">Day 7</div><div class="day-title">Kaza → Chandrataal via Key &amp; Chicham</div><div class="day-meta"><span class="meta-chip">120 km</span></div><div class="day-desc">Key Monastery. Chicham Bridge — highest suspension bridge in Asia. Camping.</div></div>
+          <div class="day-card"><div class="day-label">Day 8</div><div class="day-title">Chandrataal → Manali</div><div class="day-meta"><span class="meta-chip">112 km</span></div><div class="day-desc">Last lake views, descend to Manali for hotel stay.</div></div>
+          <div class="day-card"><div class="day-label">Day 9</div><div class="day-title">Manali — Free Day</div><div class="day-meta"><span class="meta-chip">Rest &amp; Explore</span></div><div class="day-desc">Hadimba Devi, Old Manali, Mall Road. Farewell dinner.</div></div>
+          <div class="day-card"><div class="day-label">Day 10</div><div class="day-title">Manali → Chandigarh</div><div class="day-meta"><span class="meta-chip">270 km</span></div><div class="day-desc">Tour concludes. Safe riding home.</div></div>
+        </div>
+      </div>
+      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" onclick="openBooking()">Book This Ride — ₹27,999</a>
+        <a class="btn btn-ghost" href="https://wa.me/919422881098?text=Spiti+ride+enquiry" target="_blank">WhatsApp for dates</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CHECKLIST ═══════════ -->
+<section class="page hidden" id="checklist">
+  <div class="page-hero page-hero--checklist">
+    <div class="container page-hero-inner">
+      <div class="section-kicker">Pre-Ride Preparation</div>
+      <h1 class="page-hero-title">Don't miss a<br><span class="accent">single thing.</span></h1>
+      <p class="page-hero-sub">EscapeArc's complete packing list — gear, documents, medications, bike prep. Built from experience across 150+ expeditions.</p>
+    </div>
+  </div>
+  <div class="section" style="padding-top:48px">
+    <div class="container">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="check-section">
+            <div class="check-title">📄 ID &amp; Travel Documents</div>
+            <div class="check-grid">
+              <div class="check-item warn">Valid Govt ID (Voter/Passport/Aadhaar/DL) — PAN NOT valid</div>
+              <div class="check-item warn">Driving Licence (valid for bike class)</div>
+              <div class="check-item">Vehicle RC Book</div>
+              <div class="check-item">Insurance Certificate</div>
+              <div class="check-item">PUC Certificate</div>
+              <div class="check-item">3 Passport size photos</div>
+              <div class="check-item warn">High-altitude fitness medical certificate</div>
+            </div>
+          </div>
+          <div class="check-section">
+            <div class="check-title">🎒 Bags &amp; Gear</div>
+            <div class="check-grid">
+              <div class="check-item">60L rucksack (main bag)</div>
+              <div class="check-item">15–20L day pack / tank bag</div>
+              <div class="check-item">2L water bottle / hydration pack</div>
+              <div class="check-item">Power bank (20,000 mAh+)</div>
+              <div class="check-item">Head torch + spare batteries</div>
+              <div class="check-item">Spare bike key</div>
+              <div class="check-item">Waterproof dry bags</div>
+              <div class="check-item">Rain cover for bags</div>
+            </div>
+          </div>
+          <div class="check-section">
+            <div class="check-title">👕 Clothing</div>
+            <div class="check-grid">
+              <div class="check-item">Thermal base layers (top + bottom)</div>
+              <div class="check-item">Rain gear (jacket + pants)</div>
+              <div class="check-item">2 woollen sweaters / fleece</div>
+              <div class="check-item">2 long pants</div>
+              <div class="check-item">4 pairs socks + inner socks</div>
+              <div class="check-item">Ankle shoes for off-bike</div>
+            </div>
+          </div>
+          <div class="check-section">
+            <div class="check-title">💊 Medications &amp; First Aid</div>
+            <div class="check-grid">
+              <div class="check-item warn">Altitude sickness tablets (consult doctor)</div>
+              <div class="check-item">Headache tablets</div>
+              <div class="check-item">Diarrhoea / stomach medicine</div>
+              <div class="check-item">Motion sickness tablets</div>
+              <div class="check-item">Cough relief tablets</div>
+              <div class="check-item">Antiseptic cream + bandages</div>
+              <div class="check-item">Crepe bandage + sprain spray</div>
+              <div class="check-item">Glucose powder / ORS</div>
+              <div class="check-item">Personal prescription medicines</div>
+              <div class="check-item">First aid kit</div>
+              <div class="check-item warn">Sunscreen SPF 50+ (high-altitude UV)</div>
+              <div class="check-item">Moisturiser, lip balm, cold cream</div>
+            </div>
+          </div>
+          <div class="check-section">
+            <div class="check-title">🏍️ Riding Gear (Mandatory)</div>
+            <div class="check-grid">
+              <div class="check-item warn">ECE/DOT/ISI/SNEL certified helmet — full-face or modular ONLY</div>
+              <div class="check-item warn">Half-face / crash helmet: NOT ALLOWED</div>
+              <div class="check-item">Riding jacket with CE approved armour</div>
+              <div class="check-item">Riding gloves with knuckle protection</div>
+              <div class="check-item">CE certified riding pants (recommended)</div>
+              <div class="check-item">Riding boots with ankle protection</div>
+              <div class="check-item">Visor cleaning kit + spare visor</div>
+              <div class="check-item">Anti-fog cream/spray</div>
+            </div>
+          </div>
+          <div class="check-section">
+            <div class="check-title">🔧 Bike Pre-Ride Checklist</div>
+            <div class="check-grid">
+              <div class="check-item">Chain stretch + sprocket wear</div>
+              <div class="check-item">Wheel alignment + tyre pressure + tread</div>
+              <div class="check-item">Headlight + tail + signals</div>
+              <div class="check-item">Rear swing-arm bush</div>
+              <div class="check-item">Clutch + cable condition</div>
+              <div class="check-item">All cables (replace if frayed)</div>
+              <div class="check-item">Suspension check</div>
+              <div class="check-item">Engine oil level</div>
+              <div class="check-item">Air filter clean</div>
+              <div class="check-item">Replace fuel filter</div>
+              <div class="check-item warn">Brake pads — check 2–3 times</div>
+              <div class="check-item warn">Full service at authorised centre before tour</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="margin-top:24px;padding:20px 24px;background:rgba(139,226,138,.06);border:1px solid rgba(139,226,138,.2);border-radius:16px">
+        <strong style="color:var(--accent2)">💡 Ride Guidelines:</strong>
+        <ul style="margin-top:10px;margin-left:20px;display:grid;gap:6px">
+          <li style="color:var(--muted);font-size:.9rem">Fuel tanks must be full before each day's ride</li>
+          <li style="color:var(--muted);font-size:.9rem">Carry hard cash — no ATMs in many Spiti/Ladakh spots</li>
+          <li style="color:var(--muted);font-size:.9rem">No solo-riding without Road Captain's GO signal</li>
+          <li style="color:var(--muted);font-size:.9rem">Max luggage: 10 kg/person on bike. Extra = ₹500/kg</li>
+          <li style="color:var(--muted);font-size:.9rem">No trolley bags — rucksacks only on all EscapeArc tours</li>
+        </ul>
+      </div>
+      <div style="margin-top:24px;display:flex;gap:12px;flex-wrap:wrap">
+        <a class="btn btn-primary" onclick="openBooking()">Book Your Expedition</a>
+        <a class="btn btn-ghost" href="https://wa.me/919422881098" target="_blank">WhatsApp Us</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ HOTELS ═══════════ -->
+<section class="page hidden" id="hotels">
+  <div class="page-hero page-hero--hotels">
+    <div class="container page-hero-inner">
+      <div class="section-kicker">Stay Database — Spiti &amp; Ladakh</div>
+      <h1 class="page-hero-title">1,232 verified<br><span class="accent">stays</span> on route</h1>
+      <p class="page-hero-sub">Hotels, homestays, camps, and resorts hand-mapped across Spiti Valley, Ladakh, Kinnaur &amp; Manali. Free to search, filter, and contact.</p>
+    </div>
+  </div>
+  <div class="section" style="padding-top:48px">
+    <div class="container">
+      <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px;align-items:center">
+        <input class="field" id="hotelSearch" placeholder="Search hotel or location..." style="max-width:300px;margin:0" oninput="shownHotels=12;renderHotels()"/>
+        <select class="field" id="hotelLocation" style="max-width:220px;margin:0" onchange="shownHotels=12;renderHotels()">
+          <option value="">All locations</option>
+          <option value="Ladakh">Ladakh region (290)</option>
+          <option value="Leh">Leh (129)</option>
+          <option value="Nubra">Nubra Valley (83)</option>
+          <option value="Pangong">Pangong (64)</option>
+          <option value="Hanle">Hanle (12)</option>
+          <option value="Manali">Manali (175)</option>
+          <option value="Jispa">Jispa / Keylong (75)</option>
+          <option value="Spiti">Spiti Valley (144)</option>
+          <option value="Kaza">Kaza (60)</option>
+          <option value="Tabo">Tabo (23)</option>
+          <option value="Nako">Nako (23)</option>
+          <option value="Chandratal">Chandratal (38)</option>
+          <option value="Kinnaur">Kinnaur (76)</option>
+          <option value="Sangla">Sangla (20)</option>
+          <option value="Chitkul">Chitkul (15)</option>
+          <option value="Kalpa">Kalpa (21)</option>
+          <option value="Rakchham">Rakchham (16)</option>
+        </select>
+        <select class="field" id="hotelType" style="max-width:180px;margin:0" onchange="shownHotels=12;renderHotels()">
+          <option value="">All types</option>
+          <option value="Hotel">Hotel</option>
+          <option value="Home Stay">Homestay</option>
+          <option value="Campground">Camp</option>
+          <option value="Resort">Resort</option>
+        </select>
+      </div>
+      <div id="hotelStats" style="color:var(--muted);font-size:.9rem;margin-bottom:16px"></div>
+      <div class="grid cols-4" id="hotelGrid" style="margin-top:8px"></div>
+      <div id="hotelMore" style="text-align:center;margin-top:20px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ PERFUMES ═══════════ -->
+<section class="page hidden" id="perfumes">
+  <div class="page-hero page-hero--perfumes">
+    <div class="container page-hero-inner">
+      <div class="section-kicker">EscapeArc Fragrance Line · Extrait de Parfum 32%</div>
+      <h1 class="page-hero-title">Four signatures.<br><span class="accent">One journey.</span></h1>
+      <p class="page-hero-sub">Not destinations — states of movement. 8–12 hour longevity. Engineered for the rider, worn by anyone who's been somewhere real.</p>
+      <div style="margin-top:20px;display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:rgba(244,193,74,.12);border:1px solid rgba(244,193,74,.25)">
+        <span style="color:var(--accent);font-size:.85rem;font-weight:700">⏳ Available Soon</span>
+        <span style="color:var(--muted);font-size:.82rem">Pre-orders opening — join the waitlist below</span>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="padding-top:48px">
+    <div class="container">
+      <div class="product-grid" id="perfumeGrid"></div>
+      <div style="margin-top:32px;padding:28px 32px;border-radius:24px;background:linear-gradient(135deg,rgba(244,193,74,.1),rgba(139,226,138,.06));border:1px solid rgba(244,193,74,.2);text-align:center">
+        <div class="section-kicker" style="text-align:center">Pre-launch</div>
+        <h3 style="font-size:1.6rem;margin:8px 0">These fragrances are coming soon.</h3>
+        <p style="color:var(--muted);max-width:560px;margin:0 auto;line-height:1.75">Production underway. Join the waitlist for launch discount and early access before public sale opens.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:20px">
+          <a class="btn btn-primary" onclick="sendWhatsApp('I want to join the EscapeArc Perfume waitlist')">Join Waitlist on WhatsApp</a>
+          <a class="btn btn-dark" href="mailto:escapearcofficial@gmail.com?subject=Perfume%20Waitlist">Email Waitlist</a>
+        </div>
+      </div>
+      <div style="margin-top:32px" class="panel">
+        <div class="panel-body">
+          <div class="section-kicker">About the line</div>
+          <p style="color:var(--muted);line-height:1.75">All four fragrances share a Master Base — a warm woody-amber musky foundation. Built at 32% Extrait de Parfum concentration. Engineered for 8–12 hours longevity. IFRA compliant, formulated for global distribution. Available in 10ml travel atomizer and large bottle formats.</p>
+          <div style="margin-top:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:12px;text-align:center">
+            <div style="padding:14px;background:rgba(255,255,255,.03);border-radius:14px;border:1px solid rgba(255,255,255,.07)"><div style="font-size:1.4rem">🥇</div><div style="font-size:.78rem;color:var(--muted);margin-top:6px">32% oil concentration</div></div>
+            <div style="padding:14px;background:rgba(255,255,255,.03);border-radius:14px;border:1px solid rgba(255,255,255,.07)"><div style="font-size:1.4rem">⏱️</div><div style="font-size:.78rem;color:var(--muted);margin-top:6px">8–12 hr longevity</div></div>
+            <div style="padding:14px;background:rgba(255,255,255,.03);border-radius:14px;border:1px solid rgba(255,255,255,.07)"><div style="font-size:1.4rem">🌍</div><div style="font-size:.78rem;color:var(--muted);margin-top:6px">IFRA compliant</div></div>
+            <div style="padding:14px;background:rgba(255,255,255,.03);border-radius:14px;border:1px solid rgba(255,255,255,.07)"><div style="font-size:1.4rem">🧪</div><div style="font-size:.78rem;color:var(--muted);margin-top:6px">Shared Master Base</div></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ MERCH / STREETWEAR ═══════════ -->
+<section class="page hidden" id="merch">
+  <div class="page-hero page-hero--merch">
+    <div class="container page-hero-inner">
+      <div class="section-kicker">EscapeArc · Streetwear</div>
+      <h1 class="page-hero-title">Wear the<br><span class="accent">road.</span></h1>
+      <p class="page-hero-sub">EscapeArc is entering streetwear — rider-built clothing for the road and the street. Minimal, functional, unapologetically raw.</p>
+      <div style="margin-top:20px;display:inline-flex;align-items:center;gap:10px;padding:10px 18px;border-radius:999px;background:rgba(244,193,74,.12);border:1px solid rgba(244,193,74,.25)">
+        <span style="color:var(--accent);font-size:.85rem;font-weight:700">🔜 Drop 01 — 2025</span>
+        <span style="color:var(--muted);font-size:.82rem">Waitlist open now</span>
+      </div>
+    </div>
+  </div>
+  <div class="section" style="padding-top:48px">
+    <div class="container">
+      <div style="max-width:760px;margin-bottom:48px">
+        <div class="section-kicker">The Story</div>
+        <h2 class="section-title" style="font-size:clamp(24px,3.5vw,44px)">From the expedition to everyday — the EscapeArc aesthetic meets the street.</h2>
+        <p style="color:var(--muted);margin-top:16px;line-height:1.8">EscapeArc was born on the road. Built by a rider, for riders. Everything we've created — tours, fragrances, community — carries the same DNA: raw, real, remote. The streetwear line is a natural extension of that identity. Clothes that tell you where someone has been without them having to say a word.</p>
+      </div>
+      <div class="grid cols-3" style="margin-bottom:40px">
+        <div class="banner">
+          <div class="banner-inner" style="min-height:300px">
+            <div class="section-kicker" style="color:var(--accent)">Drop 01</div>
+            <h3 style="font-size:1.3rem">Long Way Comfort Hoodie</h3>
+            <p style="color:var(--muted);font-size:.88rem;margin-top:8px;line-height:1.65">Premium heavyweight fleece. Oversized silhouette. Embroidered EscapeArc wordmark. Built for campfire warmth and city streets.</p>
+            <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
+              <span class="chip" style="font-size:.78rem"><b>Mountain Dusk</b></span>
+              <span class="chip" style="font-size:.78rem"><b>Desert Sunset</b></span>
+            </div>
+            <div style="margin-top:14px;padding:10px 14px;border-radius:12px;background:rgba(244,193,74,.08);border:1px solid rgba(244,193,74,.2)">
+              <span style="color:var(--accent);font-size:.82rem;font-weight:700">Coming Soon · ₹1,299 est.</span>
+            </div>
+          </div>
+        </div>
+        <div class="banner">
+          <div class="banner-inner" style="min-height:300px">
+            <div class="section-kicker" style="color:var(--accent)">Drop 01</div>
+            <h3 style="font-size:1.3rem">Route Zero Tee</h3>
+            <p style="color:var(--muted);font-size:.88rem;margin-top:8px;line-height:1.65">100% combed cotton, garment-washed. EscapeArc arc-logo on chest. Khardung La coordinates on back. Minimal. Permanent.</p>
+            <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
+              <span class="chip" style="font-size:.78rem"><b>Slate Black</b></span>
+              <span class="chip" style="font-size:.78rem"><b>Expedition Olive</b></span>
+            </div>
+            <div style="margin-top:14px;padding:10px 14px;border-radius:12px;background:rgba(244,193,74,.08);border:1px solid rgba(244,193,74,.2)">
+              <span style="color:var(--accent);font-size:.82rem;font-weight:700">Coming Soon · ₹699 est.</span>
+            </div>
+          </div>
+        </div>
+        <div class="banner">
+          <div class="banner-inner" style="min-height:300px">
+            <div class="section-kicker" style="color:var(--accent)">Drop 01</div>
+            <h3 style="font-size:1.3rem">Highpass Cargo Jogger</h3>
+            <p style="color:var(--muted);font-size:.88rem;margin-top:8px;line-height:1.65">Technical-feel cargo with zippered pockets. Tapered fit. Comfortable on a motorcycle, sharp enough for a café stop.</p>
+            <div style="margin-top:16px;display:flex;gap:8px;flex-wrap:wrap">
+              <span class="chip" style="font-size:.78rem"><b>Charcoal</b></span>
+              <span class="chip" style="font-size:.78rem"><b>Army Green</b></span>
+            </div>
+            <div style="margin-top:14px;padding:10px 14px;border-radius:12px;background:rgba(244,193,74,.08);border:1px solid rgba(244,193,74,.2)">
+              <span style="color:var(--accent);font-size:.82rem;font-weight:700">Coming Soon · ₹1,099 est.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div style="padding:32px;border-radius:24px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08);margin-bottom:40px">
+        <div class="section-kicker">Design Philosophy</div>
+        <div class="grid cols-3" style="margin-top:20px;gap:24px">
+          <div><div style="font-size:1.6rem;margin-bottom:10px">🪡</div><h4 style="margin-bottom:8px">Minimal. Purposeful.</h4><p style="color:var(--muted);font-size:.88rem;line-height:1.7">No unnecessary logos. Every element earns its place. Clean, rider-coded, timeless.</p></div>
+          <div><div style="font-size:1.6rem;margin-bottom:10px">🏔️</div><h4 style="margin-bottom:8px">Route-tested.</h4><p style="color:var(--muted);font-size:.88rem;line-height:1.7">Fabrics selected for temperature range, durability, packability — performance first.</p></div>
+          <div><div style="font-size:1.6rem;margin-bottom:10px">🤝</div><h4 style="margin-bottom:8px">Community-first drops.</h4><p style="color:var(--muted);font-size:.88rem;line-height:1.7">Waitlisters get first access, launch pricing, and exclusive colourways.</p></div>
+        </div>
+      </div>
+      <div style="text-align:center;padding:40px 32px;border-radius:24px;background:linear-gradient(135deg,rgba(244,193,74,.1),rgba(139,226,138,.06));border:1px solid rgba(244,193,74,.2)">
+        <div class="section-kicker" style="text-align:center">Be First</div>
+        <h3 style="font-size:1.8rem;margin:10px 0">Drop 01 launches in 2025.</h3>
+        <p style="color:var(--muted);max-width:500px;margin:0 auto;line-height:1.75">Join the waitlist for early access, launch pricing, and a chance to be featured in the EscapeArc community.</p>
+        <div style="display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin-top:24px">
+          <a class="btn btn-primary" onclick="sendWhatsApp('I want to join the EscapeArc Merch waitlist — Drop 01 streetwear')">Join Waitlist on WhatsApp</a>
+          <a class="btn btn-dark" href="mailto:escapearcofficial@gmail.com?subject=EscapeArc%20Merch%20Waitlist">Email for Waitlist</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ GALLERY ═══════════ -->
+<section class="page hidden" id="gallery">
+  <div class="page-hero page-hero--gallery">
+    <div class="container page-hero-inner">
+      <div class="section-kicker">Visual Journal</div>
+      <h1 class="page-hero-title">Life on the<br><span class="accent">route.</span></h1>
+      <p class="page-hero-sub">Frames from the road — expeditions, dawn rides, campfire evenings, and the EscapeArc community in motion.</p>
+    </div>
+  </div>
+  <div class="section" style="padding-top:48px">
+    <div class="container">
+      <div id="galleryGrid" style="display:grid;grid-template-columns:repeat(3,1fr);gap:16px"></div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ABOUT ═══════════ -->
+<section class="page hidden" id="about">
+  <div class="page-hero page-hero--about">
+    <div class="container page-hero-inner">
+      <div class="section-kicker">The EscapeArc Story</div>
+      <h1 class="page-hero-title">Built by riders,<br><span class="accent">led by experience.</span></h1>
+      <p class="page-hero-sub">Founded 2017, Buldhana. India Book of Records. Maharashtra Tourism recognized. 150+ destinations. One mission: make every journey a chapter.</p>
+    </div>
+  </div>
+  <div class="section" style="padding-top:48px">
+    <div class="container">
+      <div style="margin-bottom:24px;padding:20px 24px;background:rgba(244,193,74,.06);border:1px solid rgba(244,193,74,.2);border-radius:16px">
+        <strong style="color:var(--accent)">🏆 Recognition:</strong>
+        <span style="color:var(--muted);font-size:.9rem"> India Book of Records — riding to Khardung La Pass alongside the Indian Air Force and Army. Maharashtra Tourism recognition for promoting Chhatrapati Shivaji Maharaj's heritage.</span>
+      </div>
+      <div class="grid cols-2" style="margin-top:32px">
+        <div class="dest-card">
+          <div style="font-size:2.5rem;margin-bottom:12px">🏍️</div>
+          <h3>Harshwardhan Dhanbhar</h3>
+          <div class="badge" style="margin:10px 0;font-size:.8rem">Founder &amp; CEO · Motovlogger · Ekmusafirofficial</div>
+          <p style="color:var(--muted);font-size:.9rem;line-height:1.65">Rider-founder, travel creator, and public face of EscapeArc. India Book of Records holder. Documents motorcycle journeys and cultural expeditions across India under Ekmusafirofficial. Based in Buldhana, Maharashtra.</p>
+        </div>
+        <div class="dest-card">
+          <div style="font-size:2.5rem;margin-bottom:12px">📊</div>
+          <h3>Devarshi Gaidhane</h3>
+          <div class="badge" style="margin:10px 0;font-size:.8rem">Finance &amp; Operations</div>
+          <p style="color:var(--muted);font-size:.9rem;line-height:1.65">Handles operations, financial planning, execution, and support. The backbone that keeps every expedition running on time, on budget, and on track.</p>
+        </div>
+      </div>
+      <div class="grid cols-3" style="margin-top:24px">
+        <div class="stat"><strong>2017</strong><span>Founded in Buldhana, Maharashtra</span></div>
+        <div class="stat"><strong>150+</strong><span>Destinations explored</span></div>
+        <div class="stat"><strong>50+</strong><span>Years combined experience</span></div>
+        <div class="stat"><strong>🏆</strong><span>India Book of Records</span></div>
+        <div class="stat"><strong>🌏</strong><span>India + International tours</span></div>
+        <div class="stat"><strong>🏛️</strong><span>Maharashtra Tourism recognized</span></div>
+      </div>
+      <div style="margin-top:40px;padding:28px 32px;border-radius:24px;background:rgba(255,255,255,.03);border:1px solid rgba(255,255,255,.08)">
+        <div class="section-kicker">Our brand promise</div>
+        <h3 style="font-size:1.8rem;font-style:italic;color:var(--accent);margin-top:8px">"Where every journey becomes a Chapter in your Life."</h3>
+        <p style="color:var(--muted);margin-top:14px;line-height:1.75">EscapeArc is not just a travel company — it's a community, a brand, and a philosophy built on the belief that the road changes people. Every tour, fragrance, and piece of merch we build carries that DNA.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ POLICIES ═══════════ -->
+<section class="page hidden" id="policies">
+  <div class="page-hero page-hero--policies">
+    <div class="container page-hero-inner">
+      <div class="section-kicker">Terms &amp; Conditions</div>
+      <h1 class="page-hero-title">Clear rules,<br><span class="accent">no surprises.</span></h1>
+      <p class="page-hero-sub">Fair, transparent, and practical. Please read before booking. All tours operate under Himachal Pradesh jurisdiction.</p>
+    </div>
+  </div>
+  <div class="section" style="padding-top:48px">
+    <div class="container">
+      <div class="split">
+        <div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-bottom:24px">
+            <a class="btn btn-primary" onclick="openBooking()">Book with full policy</a>
+            <a class="btn btn-ghost" onclick="sendWhatsApp('Policy question')">Ask on WhatsApp</a>
+          </div>
+          <div style="padding:16px 20px;background:rgba(244,193,74,.06);border:1px solid rgba(244,193,74,.2);border-radius:16px;margin-bottom:16px">
+            <strong style="color:var(--accent)">Jurisdiction:</strong><span style="color:var(--muted);font-size:.9rem"> All disputes under Himachal Pradesh jurisdiction.</span>
+          </div>
+          <div style="padding:20px;background:rgba(255,109,109,.06);border:1px solid rgba(255,109,109,.2);border-radius:16px">
+            <strong style="color:var(--danger)">⚠️ Important:</strong>
+            <p style="color:var(--muted);font-size:.9rem;margin-top:8px;line-height:1.65">Most tours operate in remote, high-altitude locations. Risk of altitude sickness, limited medical facilities, and limited evacuation options. All participants must be physically fit with mandatory gear.</p>
+          </div>
+        </div>
+        <div class="accordion" id="policyAccordion"></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ CONTACT ═══════════ -->
+<section class="page hidden" id="contact">
+  <div class="page-hero page-hero--contact">
+    <div class="container page-hero-inner">
+      <div class="section-kicker">Get in Touch</div>
+      <h1 class="page-hero-title">One message<br><span class="accent">away.</span></h1>
+      <p class="page-hero-sub">Whether you want to book an expedition, ask about fragrances, or have any question — WhatsApp is the fastest way to reach us.</p>
+    </div>
+  </div>
+  <div class="section" style="padding-top:48px">
+    <div class="container">
+      <div class="panel">
+        <div class="panel-body">
+          <div class="grid cols-3">
+            <div class="card"><div class="content"><span class="badge">📧 Email</span><h3 style="margin:10px 0 4px;font-size:1rem">escapearcofficial@gmail.com</h3><p>Primary inquiry and booking address.</p><a class="btn btn-dark" style="margin-top:14px;font-size:.85rem;padding:10px 16px" href="mailto:escapearcofficial@gmail.com">Send Email</a></div></div>
+            <div class="card"><div class="content"><span class="badge">💬 WhatsApp</span><h3 style="margin:10px 0 4px;font-size:1rem">+91 94228 81098</h3><p>Fastest way to confirm dates, seats, and pricing.</p><a class="btn btn-primary" style="margin-top:14px;font-size:.85rem;padding:10px 16px" href="https://wa.me/919422881098" target="_blank">Open WhatsApp</a></div></div>
+            <div class="card"><div class="content"><span class="badge">🌐 Website</span><h3 style="margin:10px 0 4px;font-size:1rem">escapearc.in</h3><p>Visit our official website for latest tours and updates.</p><a class="btn btn-ghost" style="margin-top:14px;font-size:.85rem;padding:10px 16px" href="https://escapearc.in" target="_blank">Visit Website</a></div></div>
+          </div>
+          <div style="margin-top:24px;padding:16px 20px;background:rgba(255,255,255,.03);border-radius:16px"><strong>Registered Office:</strong><span style="color:var(--muted);font-size:.9rem"> Near Renuka Typing, Bhadech Layout, Buldhana, Maharashtra, India</span></div>
+          <div style="display:flex;gap:12px;flex-wrap:wrap;margin-top:20px">
+            <a class="btn btn-primary" onclick="openBooking()">Open Booking Form</a>
+            <a class="btn btn-dark" href="https://wa.me/919422881098?text=Hi+EscapeArc%2C+I+want+to+enquire+about+a+tour" target="_blank">WhatsApp Enquiry</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ═══════════ ADMIN ═══════════ -->
+<section class="section page hidden" id="admin">
+  <div class="container">
+    <div class="panel">
+      <div class="panel-head"><div class="section-kicker">Admin Panel</div><h2 class="section-title" style="margin-top:8px">Bookings, leads, and seat management.</h2></div>
+      <div class="panel-body">
+        <div class="grid cols-4">
+          <div class="stat"><strong id="bookingCount">0</strong><span>Total bookings</span></div>
+          <div class="stat"><strong id="seatCount">0</strong><span>Total seats left</span></div>
+          <div class="stat"><strong id="waitlistCount">0</strong><span>Merch waitlist</span></div>
+          <div class="stat"><strong id="confirmedCount">0</strong><span>Confirmed</span></div>
+        </div>
+        <div style="display:flex;gap:10px;margin:16px 0;flex-wrap:wrap">
+          <button class="btn btn-dark" onclick="exportBookings()" style="font-size:.85rem;padding:10px 16px">Export CSV</button>
+          <button class="btn btn-ghost" onclick="clearBookings()" style="font-size:.85rem;padding:10px 16px">Clear All</button>
+        </div>
+        <div style="overflow:auto;margin-top:8px">
+          <table style="width:100%;border-collapse:collapse;min-width:900px">
+            <thead><tr style="text-align:left;color:var(--accent2)">
+              <th style="padding:12px;border-bottom:1px solid rgba(255,255,255,.1)">ID</th><th style="padding:12px;border-bottom:1px solid rgba(255,255,255,.1)">Name</th><th style="padding:12px;border-bottom:1px solid rgba(255,255,255,.1)">Phone</th><th style="padding:12px;border-bottom:1px solid rgba(255,255,255,.1)">Tour</th><th style="padding:12px;border-bottom:1px solid rgba(255,255,255,.1)">Month</th><th style="padding:12px;border-bottom:1px solid rgba(255,255,255,.1)">Group</th><th style="padding:12px;border-bottom:1px solid rgba(255,255,255,.1)">Payment</th><th style="padding:12px;border-bottom:1px solid rgba(255,255,255,.1)">Status</th><th style="padding:12px;border-bottom:1px solid rgba(255,255,255,.1)">Action</th>
+            </tr></thead>
+            <tbody id="adminTable"></tbody>
+          </table>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<div class="sticky-book">
+  <button class="floating" title="Book now" onclick="openBooking()">➜</button>
+  <button class="floating alt" title="Top" onclick="showPage('home')">↑</button>
+</div>
+
+<div class="modal" id="bookingModal">
+  <div class="modal-card">
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:16px">
+      <div><div class="section-kicker">Book your ride</div><h3 style="margin:0">EscapeArc Expedition Booking</h3></div>
+      <button class="btn btn-ghost" onclick="closeBooking()" style="padding:10px 14px">✕</button>
+    </div>
+    <div class="row"><input class="field" id="bkName" placeholder="Full name *"/><input class="field" id="bkPhone" placeholder="Phone number *"/></div>
+    <div class="row"><input class="field" id="bkEmail" placeholder="Email address"/><select class="field" id="bkTour"></select></div>
+    <div class="row"><input class="field" id="bkMonth" placeholder="Travel month *"/><input class="field" id="bkGroup" type="number" min="1" max="40" placeholder="Group size"/></div>
+    <textarea class="field" id="bkNotes" placeholder="Any special requirements?" rows="3"></textarea>
+    <div class="row" style="margin-top:8px">
+      <button class="btn btn-primary" onclick="submitBooking()">Proceed to WhatsApp</button>
+      <button class="btn btn-ghost" onclick="closeBooking()">Cancel</button>
+    </div>
+    <p class="small" style="margin-top:12px;line-height:1.65"><strong style="color:var(--accent)">40% advance</strong> required to confirm. Balance due 10–15 days before departure. GST non-refundable. By booking you agree to all EscapeArc T&amp;Cs.</p>
+  </div>
+</div>
+
+<div class="ai-bot" id="aiBot">
+  <div class="ai-head">
+    <div><strong>EscapeArc Assistant</strong><div class="small" style="margin-top:2px">Tours · Booking · Perfumes · Merch</div></div>
+    <button class="btn btn-ghost" style="padding:8px 10px" onclick="toggleBot(false)">✕</button>
+  </div>
+  <div class="ai-body">
+    <div class="ai-msgs" id="aiMsgs"><div class="ai-msg">Hey! I'm the EscapeArc assistant 🏍️ Ask me about tours, perfumes, gear, or merch!</div></div>
+    <div class="ai-actions" id="aiQuickReplies">
+      <button class="btn btn-dark" onclick="botAsk('Spiti Valley')">Spiti</button>
+      <button class="btn btn-dark" onclick="botAsk('Ladakh')">Ladakh</button>
+      <button class="btn btn-dark" onclick="botAsk('Bhutan')">Bhutan</button>
+      <button class="btn btn-dark" onclick="botAsk('International tours')">International</button>
+    </div>
+    <div class="ai-actions">
+      <button class="btn btn-dark" onclick="botAsk('What gear do I need?')">Gear guide</button>
+      <button class="btn btn-dark" onclick="botAsk('Booking process')">How to book</button>
+      <button class="btn btn-dark" onclick="botAsk('Cancellation policy')">Cancellation</button>
+      <button class="btn btn-dark" onclick="botAsk('Tell me about the perfumes')">Perfumes</button>
+      <button class="btn btn-dark" onclick="botAsk('Tell me about the streetwear merch')">Merch</button>
+    </div>
+    <div class="ai-input-row">
+      <input class="ai-input" id="aiInput" placeholder="Type your question..." onkeydown="if(event.key==='Enter') botSend()"/>
+      <button class="ai-send" onclick="botSend()">→</button>
+    </div>
+  </div>
+</div>
+<button class="bot-toggle" id="botToggle" onclick="toggleBot(true)" title="Chat with EscapeArc AI">🏍️</button>
+
+<footer class="footer">
+  <div class="container footer-grid">
+    <div>
+      <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px">
+        <div style="width:44px;height:44px;border-radius:10px;overflow:hidden;background:#000;flex:0 0 auto"><img src="assets/media/brand-mark.png" alt="EscapeArc" style="width:100%;height:100%;object-fit:contain"/></div>
+        <div><strong style="color:var(--text);font-size:1.1rem">EscapeArc</strong><br><span class="small">RAW · REMOTE · REAL</span></div>
+      </div>
+      <p class="small" style="line-height:1.7">Adventure &amp; Lifestyle company — motorcycle expeditions, fragrances, and streetwear. Founded 2017, Buldhana, Maharashtra.</p>
+      <p class="small" style="margin-top:10px">📍 Near Renuka Typing, Bhadech Layout, Buldhana</p>
+    </div>
+    <div>
+      <strong style="color:var(--text)">Explore</strong>
+      <div class="footer-links">
+        <a onclick="showPage('tours')">Expeditions</a>
+        <a onclick="showPage('checklist')">Packing Checklist</a>
+        <a onclick="showPage('hotels')">Hotel Database</a>
+        <a onclick="showPage('perfumes')">Perfumes</a>
+        <a onclick="showPage('merch')">Streetwear</a>
+        <a onclick="showPage('gallery')">Gallery</a>
+      </div>
+    </div>
+    <div>
+      <strong style="color:var(--text)">Company</strong>
+      <div class="footer-links">
+        <a onclick="showPage('about')">About Us</a>
+        <a onclick="showPage('policies')">Policies &amp; T&amp;Cs</a>
+        <a onclick="showPage('contact')">Contact</a>
+        <a onclick="showPage('admin')">Admin Panel</a>
+      </div>
+    </div>
+    <div>
+      <strong style="color:var(--text)">Contact</strong>
+      <div class="footer-links">
+        <a href="mailto:escapearcofficial@gmail.com">escapearcofficial@gmail.com</a>
+        <a href="https://wa.me/919422881098" target="_blank">+91 94228 81098</a>
+        <a href="https://escapearc.in" target="_blank">escapearc.in</a>
+      </div>
+    </div>
+  </div>
+  <div class="container" style="margin-top:32px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px;border-top:1px solid rgba(255,255,255,.08);padding-top:24px">
+    <span class="small">© 2025 EscapeArc · All rights reserved · RAW · REMOTE · REAL</span>
+    <span class="small"><a onclick="showPage('policies')" style="color:var(--muted)">Privacy Policy</a> · <a onclick="showPage('policies')" style="color:var(--muted)">Terms &amp; Conditions</a></span>
+  </div>
+</footer>
+
+<div id="ea-cursor"><div id="ea-cursor-dot"></div><div id="ea-cursor-ring"></div></div>
+
+<script src="js/tours-data.js" defer></script>
+<script src="js/data.js" defer></script>
+<script src="js/main.js" defer></script>
+</body>
+</html>
